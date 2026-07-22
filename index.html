@@ -3,184 +3,130 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vithika Gupta | Senior Software Engineer & Hybrid Mobile Architect</title>
+    <title>Vithika Gupta| Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for clean icon assets -->
     <link rel="stylesheet" href="https://cloudflare.com">
 </head>
 <body>
 
-    <!-- Header Navigation -->
+    <!-- Main Navigation Bar -->
     <header class="navbar">
-        <div class="container nav-container">
-            <span class="logo">VITHIKA<strong>GUPTA</strong></span>
-            <nav>
-                <a href="#about">Home</a>
-                <a href="#impact">Impact</a>
-                <a href="#projects">Projects</a>
-                <a href="#experience">Experience</a>
-                <a href="#skills">Skills</a>
-                <a href="resume.pdf" class="btn btn-primary" download><i class="fa-solid fa-file-pdf"></i> Resume</a>
+        <div class="nav-container">
+            <div class="logo">Vithika Gupta</div>
+            
+            <div class="search-box">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input type="text" placeholder="Search..." disabled>
+                <span class="hotkey">Ctrl+K</span>
+            </div>
+
+            <nav class="nav-links">
+                <a href="#" class="active">HOME</a>
+                <a href="#">IMPACT</a>
+                <a href="#">PROJECTS</a>
+                <a href="#">INSIGHTS</a>
+                <a href="#">EXPERIENCE</a>
+                <a href="#">SKILLS</a>
+                <a href="#">RESUME</a>
+                <a href="#">CONTACT</a>
             </nav>
+
+            <div class="nav-actions">
+                <a href="#" class="social-icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                <button class="theme-toggle"><i class="fa-regular fa-sun"></i></button>
+            </div>
         </div>
     </header>
 
-    <!-- Hero Section -->
-    <section id="about" class="hero-section">
+    <!-- Hero Showcase Section -->
+    <section class="hero-section">
         <div class="container hero-grid">
-            <div class="hero-text">
-                <span class="badge-status"><span class="dot"></span> Available for Opportunities</span>
-                <h1>Vithika Gupta</h1>
-                <h2>Senior Cross-Platform & Frontend Engineer</h2>
-                <p class="hero-tagline">Transforming complex web stacks into high-performance, native iOS & Android applications.</p>
-                <p class="location"><i class="fa-solid fa-location-dot"></i> Gurugram, India | +91 7906027369 | vgvithikagupta1@gmail.com</p>
+            
+            <div class="hero-content">
+                <h1 class="hero-title">Vithika Gupta</h1>
+                <h2 class="hero-subtitle">Enterprise Analytics & AI Consultant</h2>
+                <p class="hero-description">
+                    Helping organizations transform <span>Tableau</span>, <span>Cloud Data Platforms</span>, and <span>Generative AI</span> into business value.
+                </p>
                 
-                <div class="hero-cta">
-                    <a href="mailto:vgvithikagupta1@gmail.com" class="btn btn-primary">Contact Me</a>
-                    <a href="https://github.com" target="_blank" class="btn btn-secondary"><i class="fa-brands fa-github"></i> View GitHub</a>
+                <div class="hero-tags">
+                    <span>8+ Years</span>
+                    <span>React native</span>
+                    <span>React</span>
+                    <span>SQL</span>
+                    <span>Android</span>
+                    <span>iOS</span>
+                    <span>C#</span>
+                    <span>Javascript</span>
                 </div>
+
+                <div class="hero-actions">
+                    <a href="#" class="btn btn-primary"><i class="fa-solid fa-download"></i> DOWNLOAD RESUME</a>
+                    <a href="#" class="btn btn-outline">VIEW PROJECTS</a>
+                    <a href="#" class="btn btn-outline">CONTACT ME</a>
+                </div>
+            </div>
+
+            <div class="hero-avatar-wrapper">
+                <div class="avatar-dotted-ring"></div>
+                <div class="avatar-card">
+                    <!-- Embedded Vector-Art Placeholder Graphic -->
+                    <svg viewBox="0 0 200 200" xmlns="http://w3.org">
+                        <circle cx="100" cy="100" r="90" fill="#f8fafc"/>
+                        <path d="M60,150 Q100,110 140,150 Z" fill="#1e293b"/>
+                        <circle cx="100" cy="85" r="30" fill="#cbd5e1"/>
+                        <rect x="85" y="115" width="30" height="40" rx="4" fill="#3b82f6"/>
+                    </svg>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- Unified Enterprise Company Bar -->
+    <section class="companies-section">
+        <div class="container companies-container">
+            <span class="companies-label">COMPANIES</span>
+            <div class="companies-row">
+                <span><i class="fa-solid fa-building"></i> Eaton</span>
+                <span><i class="fa-solid fa-server"></i> CAE</span>
+                <span><i class="fa-solid fa-network-wired"></i> TCS</span>
+                <span><i class="fa-solid fa-building-columns"></i> AIC</span>
             </div>
         </div>
     </section>
 
-    <!-- Quick Stats Bar (Mirrors Ankur's 11+ Years / 120+ Dashboards) -->
-    <section class="stats-bar">
-        <div class="container stats-grid">
-            <div class="stat-card"><h3>8+</h3><p>Years Experience</p></div>
-            <div class="stat-card"><h3>2+</h3><p>App Stores Active</p></div>
-            <div class="stat-card"><h3>100%</h3><p>Cross-Platform Coverage</p></div>
-            <div class="stat-card"><h3>IoT</h3><p>Hardware Integration</p></div>
-        </div>
-    </section>
-
-    <!-- Business Outcomes / Impact Section -->
-    <section id="impact" class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Delivering Measurable <em>Business Outcomes</em></h2>
-            <div class="impact-grid">
-                <div class="impact-card">
-                    <div class="icon-box"><i class="fa-solid fa-bolt"></i></div>
-                    <h3>Unified Mobile Core</h3>
-                    <p>Replaced redundant native pipelines with unified React Native codebases, slashing cross-platform engineering deployment cycles in half.</p>
-                </div>
-                <div class="impact-card">
-                    <div class="icon-box"><i class="fa-solid fa-wifi"></i></div>
-                    <h3>IoT Smart Infrastructure</h3>
-                    <p>Engineered hardware abstraction modules (Scan-to-device, custom Swift/Android native bridges) facilitating live OTA device flashes.</p>
-                </div>
-                <div class="impact-card">
-                    <div class="icon-box"><i class="fa-solid fa-gauge-high"></i></div>
-                    <h3>Sub-Second Performance</h3>
-                    <p>Optimized bundle splitting, asset caching, and lazy loaded sub-views to secure native-fluid frame rates on legacy mobile devices.</p>
-                </div>
-                <div class="impact-card">
-                    <div class="icon-box"><i class="fa-solid fa-shield-halved"></i></div>
-                    <h3>Hazard-Grade Reliability</h3>
-                    <p>Implemented end-to-end integration test suites securing mission-critical industrial lighting systems running in hazardous deployment fields.</p>
-                </div>
+    <!-- Technical Metrics Grid View -->
+    <main class="metrics-section">
+        <div class="container metrics-grid">
+            
+            <div class="metric-card">
+                <h3 class="metric-highlight text-indigo">11+</h3>
+                <h4>YEARS EXP</h4>
+                <p>Mobile App Developer</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Projects Portfolio Case Studies Section -->
-    <section id="projects" class="section">
-        <div class="container">
-            <h2 class="section-title">Enterprise-Grade <em>Case Studies</em></h2>
-            <div class="projects-grid">
-                
-                <!-- Project 1 -->
-                <div class="project-card">
-                    <div class="project-tags"><span>Aviation Analytics</span><span>Mobile Deployment</span></div>
-                    <h3>RBLogbook Application Ecosystem</h3>
-                    <p>End-to-end full life-cycle cross-platform application execution deployment onto Apple App Store and Google Play Store networks.</p>
-                    <div class="tech-stack-used">
-                        <span>React Native</span><span>React.js</span><span>TypeScript</span><span>Agile</span>
-                    </div>
-                </div>
-
-                <!-- Project 2 -->
-                <div class="project-card">
-                    <div class="project-tags"><span>IoT Integration</span><span>Native Hardware Bridge</span></div>
-                    <h3>Smart Lighting Hardware Interface</h3>
-                    <p>Custom low-level platform bridges interacting directly with hardware endpoints for scan-to-device discovery and seamless OTA infrastructure updates.</p>
-                    <div class="tech-stack-used">
-                        <span>Swift UI</span><span>Android Studio</span><span>Native Modules</span><span>React Native</span>
-                    </div>
-                </div>
-
-                <!-- Project 3 -->
-                <div class="project-card">
-                    <div class="project-tags"><span>Industrial Assets</span><span>Legacy Modernization</span></div>
-                    <h3>Hazardous Zone Asset Controller</h3>
-                    <p>Modernized critical asset dashboards by engineering highly secure, fault-tolerant responsive application shells mapped to industrial guidelines.</p>
-                    <div class="tech-stack-used">
-                        <span>Ionic</span><span>Angular</span><span>MVC.NET</span><span>Test Automation</span>
-                    </div>
-                </div>
-
+            <div class="metric-card">
+                <h3 class="metric-highlight text-indigo">120+</h3>
+                <h4>DASHBOARDS</h4>
+                <p>Designed & Certified</p>
             </div>
-        </div>
-    </section>
 
-    <!-- Custom Functional Engineering Architecture Flowcharts -->
-    <section class="section bg-light">
-        <div class="container">
-            <h2 class="section-title">Technical <em>Design Charts</em></h2>
-            <div class="architecture-box">
-                <h4>Hybrid App to Native Hardware Architecture</h4>
-                <div class="flowchart-css">
-                    <div class="flow-step">React Native UI Layer</div>
-                    <div class="flow-arrow"><i class="fa-solid fa-right-long"></i></div>
-                    <div class="flow-step accent-step">TypeScript Bridges</div>
-                    <div class="flow-arrow"><i class="fa-solid fa-right-long"></i></div>
-                    <div class="flow-step specialized-step">Native Modules (Swift/Java)</div>
-                    <div class="flow-arrow"><i class="fa-solid fa-right-long"></i></div>
-                    <div class="flow-step target-step">IoT Device Hardware</div>
-                </div>
+            <div class="metric-card">
+                <h3 class="metric-highlight text-indigo">AWS</h3>
+                <h4>CLOUD BI</h4>
+                <p>S3, Athena & Glue</p>
             </div>
+
+            <div class="metric-card">
+                <h3 class="metric-highlight text-indigo">AI/BI</h3>
+                <h4>EXTENSIONS</h4>
+                <p>Bedrock & TabPy Extensions</p>
+            </div>
+
         </div>
-    </section>
+    </main>
 
-    <!-- Experience Timeline Section -->
-    <section id="experience" class="section">
-        <div class="container">
-            <h2 class="section-title">Journey <em>So Far</em></h2>
-            <div class="timeline">
-                
-                <div class="timeline-block">
-                    <div class="timeline-meta">
-                        <h4>CAE</h4>
-                        <p class="role">Software Engineer</p>
-                        <p class="timeline-date">Apr 2022 - Present</p>
-                    </div>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Developed user-friendly mobile applications using React Native for cross-platform iOS and Android delivery.</li>
-                            <li>Built and maintained frontend solutions for mobile and web products with React Native, React.js, and TypeScript.</li>
-                            <li>Contributed to the <strong>RBLogbook</strong> project, including development, testing, and deployment on the App Store and Play Store.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-block">
-                    <div class="timeline-meta">
-                        <h4>Eaton Technologies</h4>
-                        <p class="role">Engineer</p>
-                        <p class="timeline-date">Aug 2021 - Apr 2022</p>
-                    </div>
-                    <div class="timeline-content">
-                        <ul>
-                            <li>Developed features such as scan-to-device, connect, dimming, on-off, and over-the-air upgrade for an IoT project.</li>
-                            <li>Managed end-to-end app development activities including development, testing, and publication on iOS and Android platforms.</li>
-                            <li>Built solutions using React Native and native modules for Android and Swift.</li>
-                        </ul>
-                    </div>
-                </div>
-
-                <div class="timeline-block">
-                    <div class="timeline-meta">
-                        <h4>Eaton Technologies</h4>
-                        <p class="role">Associate Engineer</p>
-                        <p class="timeline-date">Aug 2018 - Jul 2021</p>
-                    </div>
-                    <div class="timeline-content">
-                        <ul>
+</body>
+</html>
