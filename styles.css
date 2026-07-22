@@ -1,12 +1,12 @@
-/* --- Base Variables & Core Styling --- */
+/* --- Premium Theme Configuration (Inspired by Ankur's Theme Architecture) --- */
 :root {
-    --primary-color: #0f172a;   /* Clean slate dark */
-    --accent-color: #2563eb;    /* Tech professional blue */
-    --text-main: #334155;       /* Charcoal body text */
-    --text-dark: #0f172a;       /* Bold headers */
-    --bg-light: #f8fafc;        /* Cool gray section background */
-    --border-color: #e2e8f0;    /* Muted dividers */
-    --font-stack: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    --primary-slate: #0b1329;   /* Sleek Dark Background Headers */
+    --accent-blue: #3a86ff;     /* Vivid Core Tech Element Focus */
+    --accent-glow: #eef4ff;     /* Subtle Callout Tint Background */
+    --text-body: #475569;       /* High-contrast Slate Text Component */
+    --text-dark: #0f172a;       /* Deep Jet Title Selection */
+    --divider-gray: #e2e8f0;    /* Muted Border Outlines */
+    --font-primary: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
 }
 
 * {
@@ -15,26 +15,226 @@
     padding: 0;
 }
 
-html {
-    scroll-behavior: smooth;
-}
-
 body {
-    font-family: var(--font-stack);
-    line-height: 1.6;
-    color: var(--text-main);
+    font-family: var(--font-primary);
     background-color: #ffffff;
+    color: var(--text-body);
+    line-height: 1.6;
     -webkit-font-smoothing: antialiased;
 }
 
 .container {
-    width: 90%;
-    max-width: 1000px;
+    width: 92%;
+    max-width: 1140px;
     margin: 0 auto;
-    padding: 0 1rem;
 }
 
-.text-center { text-align: center; }
+.bg-light { background-color: #f8fafc; }
+.section { padding: 6rem 0; }
+
+/* --- Section Titles Line Structure --- */
+.section-title {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    margin-bottom: 3.5rem;
+    font-weight: 800;
+}
+
+.section-title em {
+    font-style: normal;
+    color: var(--accent-blue);
+    border-bottom: 3px solid var(--accent-blue);
+}
+
+/* --- Sticky Modern Navbar Layout --- */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.9);
+    border-bottom: 1px solid var(--divider-gray);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    backdrop-filter: blur(12px);
+}
+
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 75px;
+}
+
+.logo {
+    font-size: 1.25rem;
+    letter-spacing: 1px;
+    color: var(--primary-slate);
+}
+
+.logo strong { color: var(--accent-blue); }
+
+nav a {
+    text-decoration: none;
+    color: var(--text-body);
+    font-weight: 500;
+    margin-left: 2rem;
+    font-size: 0.95rem;
+    transition: color 0.2s ease;
+}
+
+nav a:hover { color: var(--accent-blue); }
+
+/* --- Interactive Action Buttons --- */
+.btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 6px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: transform 0.2s ease, background 0.2s ease;
+}
+
+.btn-primary { background-color: var(--accent-blue); color: #ffffff; }
+.btn-primary:hover { background-color: #1d6bf3; transform: translateY(-1px); }
+.btn-secondary { background-color: #f1f5f9; color: var(--text-dark); border: 1px solid var(--divider-gray); }
+.btn-secondary:hover { background-color: #e2e8f0; }
+
+/* --- High Impact Hero Block Elements --- */
+.hero-section {
+    padding: 8rem 0 5rem 0;
+    background: radial-gradient(circle at 80% 20%, #f0f7ff 0%, #ffffff 50%);
+}
+
+.badge-status {
+    background-color: #dcfce7;
+    color: #14532d;
+    padding: 0.4rem 0.8rem;
+    border-radius: 30px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.badge-status .dot {
+    width: 8px;
+    height: 8px;
+    background-color: #22c55e;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.hero-text h1 { font-size: 3.8rem; color: var(--text-dark); letter-spacing: -1.5px; line-height: 1.1; }
+.hero-text h2 { font-size: 1.8rem; color: #64748b; font-weight: 400; margin: 1rem 0; }
+.hero-tagline { font-size: 1.25rem; color: var(--text-body); max-width: 750px; margin-bottom: 1.5rem; }
+.location { font-size: 0.95rem; color: #94a3b8; margin-bottom: 2.5rem; }
+.hero-cta { display: flex; gap: 1rem; }
+
+/* --- Quick Metrics Strip Dashboard Component --- */
+.stats-bar {
+    background-color: var(--primary-slate);
+    color: #ffffff;
+    padding: 2.5rem 0;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+}
+
+.stat-card h3 { font-size: 2.8rem; color: var(--accent-blue); font-weight: 800; line-height: 1; }
+.stat-card p { font-size: 0.9rem; color: #94a3b8; text-transform: uppercase; letter-spacing: 1px; margin-top: 0.5rem; }
+
+/* --- Metric Business Outcomes Impact Cards Grid --- */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+}
+
+.impact-card {
+    background-color: #ffffff;
+    border: 1px solid var(--divider-gray);
+    padding: 2.5rem;
+    border-radius: 12px;
+    transition: box-shadow 0.3s ease;
+}
+
+.impact-card:hover { box-shadow: 0 10px 30px rgba(15, 23, 42, 0.05); }
+.icon-box { color: var(--accent-blue); font-size: 1.5rem; margin-bottom: 1rem; }
+.impact-card h3 { font-size: 1.3rem; color: var(--text-dark); margin-bottom: 0.75rem; }
+
+/* --- Architectural Project Presentation Structure --- */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 2rem;
+}
+
+.project-card {
+    background: #ffffff;
+    border: 1px solid var(--divider-gray);
+    border-radius: 12px;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.project-tags { display: flex; gap: 0.5rem; margin-bottom: 1rem; }
+.project-tags span { font-size: 0.75rem; background: var(--accent-glow); color: var(--accent-blue); padding: 0.25rem 0.6rem; border-radius: 4px; font-weight: 600; }
+.project-card h3 { font-size: 1.25rem; color: var(--text-dark); margin-bottom: 1rem; }
+.project-card p { font-size: 0.95rem; margin-bottom: 1.5rem; }
+.tech-stack-used { display: flex; flex-wrap: wrap; gap: 0.4rem; }
+.tech-stack-used span { background: #f1f5f9; font-size: 0.8rem; padding: 0.2rem 0.5rem; border-radius: 4px; color: #64748b; }
+
+/* --- Flowchart / Architecture Display Pipelines --- */
+.architecture-box {
+    background: #ffffff;
+    border: 1px solid var(--divider-gray);
+    border-radius: 12px;
+    padding: 2.5rem;
+}
+
+.architecture-box h4 { margin-bottom: 2rem; color: var(--text-dark); }
+.flowchart-css { display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+.flow-step { background: #f1f5f9; border: 1px solid var(--divider-gray); padding: 1rem 1.5rem; border-radius: 8px; font-weight: 600; font-size: 0.9rem; text-align: center; flex: 1; min-width: 160px; }
+.accent-step { background: #dbeafe; border-color: #bfdbfe; color: #1e40af; }
+.specialized-step { background: #dcfce7; border-color: #bbf7d0; color: #166534; }
+.target-step { background: var(--primary-slate); color: #ffffff; border: none; }
+.flow-arrow { color: #94a3b8; }
+
+/* --- Symmetric Experience Timeline Tracks --- */
+.timeline { display: flex; flex-direction: column; gap: 3rem; position: relative; }
+.timeline-block { display: grid; grid-template-columns: 250px 1fr; gap: 3rem; }
+.timeline-meta h4 { font-size: 1.3rem; color: var(--text-dark); }
+.timeline-meta .role { font-weight: 600; color: var(--accent-blue); font-size: 1rem; }
+.timeline-meta .timeline-date { font-size: 0.9rem; color: #94a3b8; }
+.timeline-content ul { padding-left: 1.2rem; }
+.timeline-content li { margin-bottom: 0.75rem; font-size: 1rem; }
+
+/* --- Toolkit Core Categories Styling --- */
+.skills-category-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+.skill-cat-card { background: #ffffff; border-radius: 8px; padding: 1.5rem; border: 1px solid var(--divider-gray); }
+.skill-cat-card h5 { font-size: 1.1rem; color: var(--text-dark); margin-bottom: 0.5rem; }
+
+/* --- Structural Footer Layout --- */
+footer { background: var(--primary-slate); color: #64748b; padding: 2.5rem 0; font-size: 0.9rem; }
+
+/* --- Mobile Breakpoint Handling Adaptations --- */
+@media(max-width: 992px) {
+    .projects-grid { grid-template-columns: 1fr; }
+    .timeline-block { grid-template-columns: 1fr; gap: 0.5rem; }
+    .impact-grid { grid-template-columns: 1fr; }
+    .skills-category-grid { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2, 1fr); gap: 1.5rem; }
+    .flowchart-css { flex-direction: column; }
+    .flow-arrow { transform: rotate(90deg); margin: 0.5rem 0; }
+    .hero-text h1 { font-size: 2.6rem; }
+}.text-center { text-align: center; }
 .bg-light { background-color: var(--bg-light); }
 
 /* --- Section Formatting --- */
